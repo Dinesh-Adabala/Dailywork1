@@ -1,0 +1,47 @@
+Static methods in Java cannot be overridden. This is because static methods are not associated with the instance of a class, but with the class itself. Therefore, when a subclass inherits a static method from its parent class, it cannot modify the behavior of the static method in any way.
+class Parent {
+    public static void staticMethod() {
+        System.out.println("Parent's static method");
+    }
+}
+class Child extends Parent {
+    public static void staticMethod() {
+        System.out.println("Child's static method");
+    }
+}
+public class PrepBytes {
+    public static void main(String[] args) {
+        Parent p = new Child();
+        p.staticMethod();
+    }
+}
+
+It is not possible to override the static methods in Java. However, it is possible to hide static methods in Java using the static keyword.
+
+
+Class loaders:
+Class loaders are responsible for loading Java classes dynamically to the JVM (Java Virtual Machine) during runtime. They’re also part of the JRE (Java Runtime Environment). Therefore, the JVM doesn’t need to know about the underlying files or file systems in order to run Java programs thanks to class loaders.
+
+Furthermore, these Java classes aren’t loaded into memory all at once, but rather when they’re required by an application. This is where class loaders come into the picture. They’re responsible for loading classes into memory.
+
+Java ClassLoader is used to load the classes at run time. In other words, JVM performs the linking process at runtime. Classes are loaded into the JVM according to need. If a loaded class depends on another class, that class is loaded as well. When we request to load a class, it delegates the class to its parent.
+
+
+
+
+
+<html>
+<head>
+<title>DINESH ADABALA </title>
+</head>
+<body bgcolor="green">
+<h2 align="center">ADS</h2><hr><hr>
+<h5>ADABALA</h5><hr>
+<h>abcdefghijklmnopqrstuvwxyz</h><hr>
+<h2>DINESH</h2><hr>
+<h ><p align="center"> abcdefghijklmnopqrstuvwxyz</p></h><hr>
+<h2>SAI GOPI</h2><hr>
+<h align="right"><p align="right"> abcdefghijklmnopqrstuvwxyz</p></h><hr><hr>
+<h5 align="center">END</h5><hr><hr>
+</body>
+</html>
